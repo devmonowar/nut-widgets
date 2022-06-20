@@ -1,0 +1,436 @@
+
+/*==================================================================
+                        Start Nut Widget table Global Css
+=========================================================================*/
+
+  /* Aligning */
+.text-center {
+  text-align: center;
+}
+
+
+/*Group button*/
+.group_btn ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 15px;
+}
+.group_btn li {
+    background-color: #D0D1E6;
+    font-size: 16px;
+    color: #092EED;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.group_btn li:first-child {
+    border-radius: 8px 0 0 8px !important;
+}
+.group_btn li:last-child {
+    border-radius: 0px 8px 8px 0 !important;
+}
+.group_btn li.active,
+.group_btn li:hover {
+    background-color: #39d377;
+    color: #fff;
+}
+
+.table_column {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 16%);
+    border-radius: 10px;
+    transition: box-shadow 300ms ease, transform 300ms ease;
+    margin: 20px;
+    padding: 20px 10px;
+    text-align: center;
+    background: #fff;
+}
+.table_column:hover {
+    box-shadow: 0 0 30px rgb(0 0 0 / 15%);
+    transform: translateY(-3px);
+}
+
+.package_name {
+    margin-bottom: -5px;
+}
+.package_name h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/*heading_price_wrap*/
+.heading_price_wrap {
+    position: relative;
+    height: 55px;
+    margin-bottom: 20px;
+}
+
+.heading_price_wrap .heading_price {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 100%;
+  color: #092eed;
+  visibility: hidden;
+  opacity: 0;
+  height: auto;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 0.4s;
+}
+.heading_price_wrap .heading_price .big {
+    font-size: 40px;
+}
+.heading_price_wrap:after {
+    content: "";
+    background: #092eed;
+    width: 45px;
+    height: 3px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease-in-out .0s;
+}
+.table_column:hover .heading_price_wrap::after {
+    width: 65px;
+}
+
+.table_column .price_default,
+.monthly .price_monthly,
+.annually .price_annually,
+.biennially .price_biennially,
+.triennially .price_triennially {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: 0.4s;
+  top: 0px;
+}
+
+.total_price {
+  color: #23282D;
+  font-size: 13px;
+}
+
+/*Start Total Price text*/
+.total_price_wrap {
+    position: relative;
+    height: 20px;
+}
+.total_price_wrap .total_price {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  color: #130f40;
+  visibility: hidden;
+  opacity: 0;
+  height: auto;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.4s;
+  line-height: 15px;
+}
+.total_price_wrap .total_price_default,
+.monthly .total_price_monthly,
+.annually .total_price_annually,
+.biennially .total_price_biennially,
+.triennially .total_price_triennially {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: 0.2s;
+  top: 0px;
+}
+
+/*End Total Price*/
+
+/*Start discunt text*/
+.discount_text_wrap {
+    position: relative;
+    height: 30px;
+}
+.discount_text_wrap .discount_text {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  color: #26a767;
+  visibility: hidden;
+  opacity: 0;
+  height: auto;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.4s;
+}
+.discount_text_wrap .discount_default,
+.monthly .discount_monthly,
+.annually .discount_annually,
+.biennially .discount_biennially,
+.triennially .discount_triennially {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: 0.2s;
+  top: 0px;
+}
+
+/*End discunt text*/
+
+
+/*Start discunt text*/
+.renew_price_wrap {
+    position: relative;
+    height: 25px;
+}
+.renew_price_wrap .renew_price {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  height: auto;
+  font-weight: 700;
+  transition: 0.4s;
+  color: #130F40;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.renew_price_wrap .renew_price_default,
+.monthly .renew_price_monthly,
+.annually .renew_price_annually,
+.biennially .renew_price_biennially,
+.triennially .renew_price_triennially {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: 0.2s;
+  top: 0px;
+}
+
+
+/*End discunt text*/
+
+
+.features ul li {
+    list-style: none;
+    padding: 4px;
+}
+
+/*btn*/
+.table_column .btn-style2 {
+  position: relative;
+  height: 67px;
+}
+
+
+.table_column .btn-style2 a {    
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  top: 0px;
+  color: #092eed;
+  border-radius: 50px;
+  background: #d0d1e6;
+  visibility: hidden;
+  opacity: 1;
+  height: auto;
+  margin: 10px 0 0;
+  padding: 5px;
+  font-size: 20px;
+  transition: 0.2s;
+}
+.table_column .btn-style2 a:hover {    
+  color: #fff;
+  background: #092eed;
+}
+.table_column .btn-style2 a i {
+    font-size: 14px;
+	margin-right: 5px;
+}
+
+.table_column .btn-style2 .order_btn_default,
+.table_column.monthly .order_btn_monthly,
+.table_column.annually .order_btn_annually,
+.table_column.biennially .order_btn_biennially,
+.table_column.triennially .order_btn_triennially {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: 0.4s;
+  top: 0px;
+}
+
+.features {
+    border-top: 1px solid rgba(0,0,0,.07);
+}
+.features ul {
+    margin: 0;
+    padding-top: 6px;
+}
+.features ul li {
+    list-style: none;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.features ul li i {
+  color: #2ed573;
+   padding-right: 5px;
+}
+
+
+/* Best Value */
+.simple_table .table_column {
+	position: relative;
+}
+.simple_table .table_column:nth-child(2)::before {
+    content: "Best Value";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3AD377;
+    padding: 3px 0;
+    border-radius: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    width: 140px;
+    border: 1px solid #ffffff94;
+    text-align: center;
+}
+
+
+/*==================================================================
+                        End Nut Widget table Global Css
+=========================================================================*/
+
+
+
+
+/*==================================================================
+                         Start Simple table
+=========================================================================*/
+/*Nut Table*/
+.simple_table {
+    display: flex;
+}
+
+.simple_table .table_column {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*==================================================================
+                         End Simple table
+=========================================================================*/
+
+
+/*==================================================================
+                         Start Slider table
+=========================================================================*/
+
+/*arrow*/
+.slider_table.owl-carousel .owl-nav button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    left: -30px;
+    top: 50%;
+    margin-top: -25px;
+    font-size: 40px;
+    line-height: 40px;
+    color: #fff;
+}
+.slider_table.owl-carousel .owl-nav button.owl-next {
+    right: -30px;
+    left: auto;
+}
+
+/* dots*/
+.slider_table .owl-dots {
+    text-align: center;
+}
+.slider_table .owl-dots button.owl-dot {
+    width: 10px;
+    height: 10px;
+    background: #D0D1E6;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 50px;
+}
+.slider_table .owl-dots button.owl-dot.active {
+    background: #2ed573;
+}
+
+/*==================================================================
+                         End Slider table
+=========================================================================*/
+
+
+
+/*start table, je code nut plugin e niye jabo*/
+.subttl_price {
+    display: flex;
+    justify-content: center;
+}
+.heading_price .currency_symbols {
+    font-size: 24px;
+}
+span.currency_symbols {
+    margin-left: 5px;
+}
+.renew_price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total_price_wrap .total_price {
+    display: flex;
+    justify-content: center;
+}
+.nut_price .discount {
+    font-size: 20px;
+    color: #39d377;
+}
+.discount_text_wrap .discount_text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*end table, je code nut plugin e niye jabo*/
+
+
+
+
+
+
+
+/*==================================================================
+                      Start  Media Query
+=========================================================================*/
+@media only screen and (max-width: 767px) {
+.group_btn ul {
+    margin: 15px 0;
+}
+.group_btn li {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.simple_table {
+    flex-wrap: wrap;
+}
+	
+
+}
+
+
+/*==================================================================
+                      Start  Media Query
+=========================================================================*/
