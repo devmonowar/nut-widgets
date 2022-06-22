@@ -43,7 +43,7 @@ class simple_table extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return __( 'Simple Tabel', 'plugin-name' );
+		return __( 'Simple Tabel', 'nut-widgets' );
 	}
 
 	/**
@@ -90,11 +90,22 @@ class simple_table extends Widget_Base {
 		$this->start_controls_section(
 			'table_content',
 			[
-				'label' => __( 'Simple Tabel', 'plugin-name' ),
+				'label' => __( 'Simple Tabel', 'nut-widgets' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
-
+		
+		$this->add_control(
+			'hide_filter_btn',
+			[
+				'label' => esc_html__( 'Hide Filter Button', 'plugin-name' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Yes', 'your-plugin' ),
+				'label_off' => esc_html__( 'No', 'your-plugin' ),
+				'return_value' => 'yes',
+				'default' => 'no',
+			]
+		);
 
 
 	    $repeater = new \Elementor\Repeater();
@@ -105,6 +116,18 @@ class simple_table extends Widget_Base {
 				'type' => Controls_Manager::TEXT,
 				'default' => __( 'Package Name' , 'nut-widgets' ),
 				'label_block' => true,
+			]
+		);
+		
+		$repeater->add_control(
+			'show_best_value',
+			[
+				'label' => esc_html__( 'Show Best Value', 'nut-widgets' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'nut-widgets' ),
+				'label_off' => esc_html__( 'Hide', 'nut-widgets' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
 			]
 		);
 
@@ -452,7 +475,7 @@ class simple_table extends Widget_Base {
 		$settings = $this->get_settings_for_display(); ?>
 
 
-		<div class="group_btn simple_table_group_btn">
+		<div class="group_btn simple_table_group_btn <?php if ( 'yes' === $settings['hide_filter_btn'] ) { echo 'hide_filter_btn'; } ?> ">
 			<ul>
 				<li class="monthly"><?php echo esc_html("Monthly"); ?></li>
 				<li class="annually active"><?php echo esc_html("Yearly"); ?></li>
@@ -467,7 +490,7 @@ class simple_table extends Widget_Base {
         	if ( $settings['list'] ) :
 				foreach (  $settings['list'] as $item ) : ?>
 
-		    <div class="table_column simple_table_column">
+		    <div class="table_column simple_table_column <?php if ( 'yes' === $item['show_best_value'] ) { echo 'show_best_value'; } ?>">
 		    	<div class="package_name">
 		    		<h3><?php echo $item['package_name']?></h3>
 		    	</div>
