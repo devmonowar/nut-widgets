@@ -8,7 +8,7 @@
 }
 
 
-/*Group button*/
+/*Group button start*/
 .group_btn ul {
     display: flex;
     align-items: center;
@@ -37,6 +37,13 @@
 .hide_filter_btn {
     display: none;
 }
+.hidden_monthly li.monthly {
+    display: none;
+}
+.hidden_monthly .group_btn li:nth-child(2) {
+    border-radius: 8px 0 0 8px !important;
+}
+/*Group button end*/
 
 .table_column {
     box-shadow: 0 1px 3px rgb(0 0 0 / 16%);
@@ -122,7 +129,7 @@
 /*Start Total Price text*/
 .total_price_wrap {
     position: relative;
-    height: 20px;
+    height: 26px;
 }
 .total_price_wrap .total_price {
   position: absolute;
@@ -155,7 +162,7 @@
 /*Start discunt text*/
 .discount_text_wrap {
     position: relative;
-    height: 30px;
+    height: 40px;
 }
 .discount_text_wrap .discount_text {
   position: absolute;
@@ -273,6 +280,8 @@
     border-top: 1px solid rgba(0,0,0,.07);
     padding: 6px 12px;
     margin-top: 12px;
+    margin-left: 16px;
+    text-align: left;
 }
 .features ul {
     margin: 0;
@@ -412,6 +421,16 @@ span.currency_symbols {
     font-size: 20px;
     color: #39d377;
 }
+.discount_text .discount {
+    font-size: 16px;
+    color: #fff;
+    background: #e34f4f;
+    border-radius: 5px;
+    padding: 3px 6px;
+    margin: 5px 0;
+    display: inline-block;
+}
+
 .discount_text_wrap .discount_text {
     font-size: 16px;
     font-weight: 500;
