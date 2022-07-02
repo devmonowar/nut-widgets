@@ -1,4 +1,3 @@
-
 (function ($) {
 "use strict";
 
@@ -156,7 +155,20 @@ $(window).on('elementor/frontend/init', function () {
     elementorFrontend.hooks.addAction('frontend/element_ready/slick-marquee.default', slick_marquee);
 });
 
-
+	//read more less
+$(document).ready(function(){
+    
+    $(".read_btn").click(function(){
+    $(this).prev().toggle();
+    $(this).siblings('.dots').toggle();
+    if($(this).text()=='read more'){
+    $(this).text('read less');
+    }
+    else{
+    $(this).text('read more');
+    }
+    });
+});
 
 
 })(jQuery);

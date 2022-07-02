@@ -99,11 +99,13 @@ class NutWidgets {
 		require_once( __DIR__ . '/widgets/simple-table.php' );
 		require_once( __DIR__ . '/widgets/slider-table.php' );
 		require_once( __DIR__ . '/widgets/slick-marquee.php' );
+		require_once( __DIR__ . '/widgets/read-more.php' );
 
 		// Register Widgets
 		$widgets_manager->register( new Widgets\simple_table() );
 		$widgets_manager->register( new Widgets\slider_table() );
 		$widgets_manager->register( new Widgets\slick_marquee() );
+		$widgets_manager->register( new Widgets\read_more() );
 	}
 
 

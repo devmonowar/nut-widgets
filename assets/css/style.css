@@ -442,6 +442,39 @@ span.currency_symbols {
 
 
 
+/*==================================================================
+                      Start Read More Less
+=========================================================================*/
+.more{
+    display: none;
+}
+
+.post_read p:not(:last-child){
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.post_read button.read_btn {
+    display: inline-block;
+    color: #092eed;
+    border: none;
+    outline: none !important;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 16px;
+    background: none;
+    padding: 0;
+}
+.post_read button.read_btn:hover,
+.post_read button.read_btn:focus{
+    background: none;
+    color: #092eed;
+}
+
+/*==================================================================
+                      End Read More Less
+=========================================================================*/
+
+
 
 
 /*==================================================================
